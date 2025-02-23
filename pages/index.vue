@@ -249,16 +249,16 @@ main {
     }
 
     & .carouselcontainer {
-      width: 80%;
+      width: 95%;
 
       & .carouselitem {
         height: 80vh;
-        width: 35rem;
+        width: 90vw;
         display: flex;
         flex-direction: column;
 
         & img {
-          width: 35rem;
+          width: 90vw;
           object-fit: cover;
           height: 80%;
           border-top-left-radius: 1rem;
@@ -267,7 +267,7 @@ main {
 
         & div {
           height: 20%;
-          width: 35rem;
+          width: 90vw;
           background-color: white;
           border-bottom-left-radius: 1rem;
           border-bottom-right-radius: 1rem;
@@ -338,66 +338,21 @@ main {
   }
 
   & > section.body {
-    padding-left: 224px;
-    padding-right: 224px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     margin-bottom: 5rem;
     margin-top: -3.5rem;
 
     & > div {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 3rem;
+      display: flex;
+      flex-direction: column;
       gap: 48px;
 
       & .items {
         position: relative;
         border-radius: 0.5rem;
-
-        &.first {
-          grid-row-start: span 4;
-          grid-column: 1 / span 1;
-        }
-
-        &.second {
-          grid-row-start: span 6;
-          grid-column: 2 / span 1;
-        }
-
-        &.third {
-          grid-row-start: span 5;
-          grid-column: 3 / span 1;
-        }
-
-        &.fourth {
-          grid-row-start: span 5;
-          grid-column: 1 / span 1;
-        }
-
-        &.fifth {
-          grid-row-start: span 4;
-          grid-column: 2 / span 1;
-        }
-
-        &.sixth {
-          grid-row-start: span 6;
-          grid-column: 3 / span 1;
-        }
-
-        &.seventh {
-          grid-row-start: span 6;
-          grid-column: 1 / span 1;
-        }
-
-        &.eighth {
-          grid-row-start: span 5;
-          grid-column: 2 / span 1;
-        }
-
-        &.ninth {
-          grid-row-start: span 4;
-          grid-column: 3 / span 1;
-        }
+        height: 30rem;
 
         & img {
           width: 100%;
@@ -449,6 +404,184 @@ main {
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    & > section.carousel {
+      background-color: rgba(0, 0, 0, 0.336);
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .arrow {
+        background-color: white;
+        border-radius: 100%;
+        padding: 12px;
+        padding-left: 18px;
+        padding-right: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      & .carouselcontainer {
+        width: 80%;
+
+        & .carouselitem {
+          height: 80vh;
+          width: 35rem;
+          display: flex;
+          flex-direction: column;
+
+          & img {
+            width: 35rem;
+            object-fit: cover;
+            height: 80%;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+          }
+
+          & div {
+            height: 20%;
+            width: 35rem;
+            background-color: white;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+
+            & p:first-child {
+              font-weight: 500;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    & > section.body {
+      padding-left: 5vw;
+      padding-right: 5vw;
+      margin-bottom: 5rem;
+      margin-top: -3.5rem;
+
+      & > div {
+        width: 100%;
+        gap: 48px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        & .items {
+          position: relative;
+          border-radius: 0.5rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    & > section.body {
+      padding-left: 5vw;
+      padding-right: 5vw;
+      margin-bottom: 5rem;
+      margin-top: -3.5rem;
+
+      & > div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 3rem;
+        gap: 48px;
+
+        & .items {
+          position: relative;
+          border-radius: 0.5rem;
+          height: 100%;
+          width: 100%;
+
+          &.first {
+            grid-row-start: span 4;
+            grid-column: 1 / span 1;
+          }
+
+          &.second {
+            grid-row-start: span 6;
+            grid-column: 2 / span 1;
+          }
+
+          &.third {
+            grid-row-start: span 5;
+            grid-column: 3 / span 1;
+          }
+
+          &.fourth {
+            grid-row-start: span 5;
+            grid-column: 1 / span 1;
+          }
+
+          &.fifth {
+            grid-row-start: span 4;
+            grid-column: 2 / span 1;
+          }
+
+          &.sixth {
+            grid-row-start: span 6;
+            grid-column: 3 / span 1;
+          }
+
+          &.seventh {
+            grid-row-start: span 6;
+            grid-column: 1 / span 1;
+          }
+
+          &.eighth {
+            grid-row-start: span 5;
+            grid-column: 2 / span 1;
+          }
+
+          &.ninth {
+            grid-row-start: span 4;
+            grid-column: 3 / span 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    & > section.body {
+      padding-left: 112px;
+      padding-right: 112px;
+      margin-bottom: 5rem;
+      margin-top: -3.5rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    & > section.body {
+      padding-left: 224px;
+      padding-right: 224px;
+      margin-bottom: 5rem;
+      margin-top: -3.5rem;
     }
   }
 }
